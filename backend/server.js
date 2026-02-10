@@ -13,7 +13,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+// Routes (Importing)
+const authRoutes = require('./routes/auth');
+    
+// Use Routes
+app.use('/api/auth', authRoutes);
 
 // Base route
 app.get('/', (req, res) => {
