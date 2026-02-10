@@ -15,10 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes (Importing)
 const authRoutes = require('./routes/auth');
+const carRoutes = require('./routes/cars');
     
 // Use Routes
 app.use('/api/auth', authRoutes);
-
+app.use('/api/cars', carRoutes);
 // Base route
 app.get('/', (req, res) => {
     res.send('Car Buying System API is running...');
